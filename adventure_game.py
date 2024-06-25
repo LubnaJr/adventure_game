@@ -7,11 +7,13 @@ def print_sleep(message, wait):
 
 def choose_character():
     global character
-    print_sleep("You are about to discover a fiary word with all sorts of monsters and creatures!",2)
-    print_sleep("choose you character: ",1)  
-    print_sleep("1. Ice Wizard: Auron Frostbane\nCommand the relentless power of ice and snow with Auron Frostbane, the wizard whose chilling magic can freeze foes in their tracks and turn the tide of any battle.",3)
-    print_sleep("2. Fire Fay: Lyra Emberwing\nUnleash the blazing fury of Lyra Emberwing, the fire fay whose incandescent flames and searing speed ignite the battlefield and inspire awe in allies.",3)
-    print_sleep("what character do you choose? ",1)
+    print_sleep("You are about to discover a fiary word with all sorts of monsters and creatures!", 2)
+    print_sleep("choose you character: ", 1)  
+    print_sleep("1. Ice Wizard: Auron Frostbane\nCommand the relentless power of ice and snow with Auron Frostbane,", 2)
+    print_sleep("the wizard whose chilling magic can freeze foes in their tracks and turn the tide of any battle.", 2)
+    print_sleep("2. Fire Fay: Lyra Emberwing\nUnleash the blazing fury of Lyra Emberwing,", 2)
+    print_sleep("the fire fay whose incandescent flames and searing speed ignite the battlefield and inspire awe in allies.", 2)
+    print_sleep("what character do you choose? ", 1)
     choice = ''
     while choice not in ['1', '2']:
         choice = input("(Please enter 1 or 2.)\n")
@@ -49,11 +51,11 @@ def cave():
         print_sleep("Your eye catches a glint of metal behind a rock.", 2)
         if character == '2':
             print_sleep("You have found Emberfall Daggers!",2)
-            print_sleep("Forged in the heart of a dragon's inferno, these twin blades burn with an eternal flame, ready to ignite the battlefield.",2)
+            print_sleep("Forged in the heart of a dragon's inferno, these twin blades burn with an eternal flame, ready to ignite the battlefield.", 2)
             weapon = "Emberfall Daggers" 
         elif character == '1':          
             print_sleep("You have found the Frostheart Scepter!", 2)
-            print_sleep("This ancient scepter, once wielded by a forgotten ice deity, pulses with the raw power of glaciers and blizzards.",2)
+            print_sleep("This ancient scepter, once wielded by a forgotten ice deity, pulses with the raw power of glaciers and blizzards.", 2)
             weapon = "Frostheart Scepter" 
         print_sleep(f"You discard your silly old dragger and take the {weapon} with you.", 2)
     cave_visited = True
@@ -109,4 +111,4 @@ while state == 'running':
     choose_character()
     intro()
     choose_approach()
-    state = play_again()     
+    state = play_again()             
